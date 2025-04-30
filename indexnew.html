@@ -1,0 +1,173 @@
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1" name="viewport" />
+  <title>Geomatika SMKN2 Yogyakarta</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+  />
+  <style>
+    @import url("https://fonts.googleapis.com/css2?family=Anton&display=swap");
+ h2{
+    font-size: 500%;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+ }
+
+html{
+  scroll-behavior: smooth;
+}
+
+ #navMenu{
+  font-family:'poppins', sans-serif;
+  background: rgba(30, 30, 30, 0.9);
+  padding: 10px;
+  border-radius: 10px;
+  width: 200px;
+ }
+
+ .menu ul{
+  list-style: none;
+  padding: 0;
+ }
+
+ .menu li{
+  margin: 15px 0;
+ }
+
+ .menu a{
+  color: beige;
+  text-decoration: none;
+  font-size: 18px;
+  transition: 0.3s;
+ }
+
+ .menu a:hover{
+  color: 00bcd4;
+  padding-left: 15px;
+ }
+   </style>
+</head>
+<body class="bg-white">
+  <header class="bg-[gray] flex items-center px-4 py-2">
+    <button aria-label="Menu" class="text-white text-2xl mr-4">
+        <div id="navMenu" class="hidden flex-col bg-[gray] text-white absolute top-12 left-4 rounded-md shadow-md z-10 w-44">
+          <ul>
+            <li><a href="indexnew.html">Beranda</a></li>
+            <li><a href="profiljurusan1.html">Profil Jurusan</a></li>
+            <li><a href="album1.html">Album</a></li>
+            <li><a href="prestasii.html">Prestasi</a></li>
+           <li> <a href="bukutamu1.html">Buku Tamu</a></li>
+          </div></ul>
+      <i class="fas fa-bars"></i>
+    </button>
+
+    <span class="inline-block mx-1">
+        <img
+          class="inline-block align-middle"
+          height="30px"
+          src="image/logosmk-removebg.png"
+          width="100px
+          " 
+          class="w-6 h-6 mr-2"
+        />
+      </span>
+    <h1
+      class="text-white font-bold text-[16px] sm:text-[18px] md:text-[40px] leading-tight"
+      style="font-family: 'Anton', sans-serif;"
+    >
+      TEKNIK GEOMATIKA
+   SMK N 2 Yogyakarta
+    </h1>
+  </header>
+  <script>
+    const menuBtn = document.querySelector('button[aria-label="Menu"]');
+    const navMenu = document.getElementById('navMenu');
+  
+    menuBtn.addEventListener('click', () => {
+      navMenu.classList.toggle('hidden');
+    });
+  </script>
+
+<div class="p-4">
+    <table class="table-auto w-full border-collapse">
+      <tr>
+        <td class="align-top p-10 w-1/2">
+          <h1 style="font-size: 45px; font-weight: bold; animation: fadeIn 2s ease-in-out;">Selamat datang di website jurusan Geomatika SMK Negeri 2. 
+            Temukan informasi menarik seputar kegiatan, prestasi, dan profil jurusan kami di sini!</h1>
+        </td>
+        <td class="align-top p-4 w-1/2">
+          <br>
+          <h2 style="font-size: 30px; font-weight: bold; margin-bottom: 15px; animation:fadeIn 3s ease-in-out ;">
+            Apa Itu Teknik Geomatika?
+          </br>
+          </h2>
+          <p style="font-size: 25px; margin-top: 20px; animation: fadeIn 3s ease-in-out;"> Teknik Geomatika atau Teknik Survey Pemetaan adalah ilmu perpaduan antara teknik Geodesi
+             dan Ilmu Informatika, oleh sebab itu, kompetensi keahlian ini mempelajari bagaimana mengintegrasikan pengumpulan, pemodelan, analisis,
+             dan manajemen data spasial (berbasis lokasi) yang berdasarkan pada ilmu Geodesi.</p>
+    
+        </td>
+      </tr>
+    </table>
+  </div>
+<style>
+  @keyframes fadeIn {
+    from{
+      opacity: 0; transform: translateY(-20px);
+    }
+    to{
+      opacity: 1; transform: translateY(0);
+    }
+  }
+</style>
+  
+<footer class="bg-gray-700 text-white pt-6 pb-3 px-6 mt-10">
+
+    <div class="flex flex-col md:flex-row justify-between gap-6">
+      <div>
+        <h2 class="font-bold text-lg mb-2">SMKN 2 Yogyakarta</h2>
+        <p> Alamat : Jl. AM. Sangaji 47 Yogyakarta<br />
+        Cokrodiningratan, Jetis, Yogyakarta<br />
+        No telp: (0274) 513490 / (0274) 512639<br />
+        Akreditasi: A</br>
+        info: @smk2-yk.sch.id</br>
+      </div>
+    
+      <div>
+      <h2 class="font-bold text-lg mb-2">Media Sosial</h2>
+      <div style="margin-top: 20px; display: flex; flex-direction: row; align-items: center; justify-content: center;">
+        <a href="http://www.youtube.com/@SMKN2Yogyakarta" target="_blank" style="margin: 10px 0;">
+        <img src="image/ytbg-removebg-preview.png"alt="YouTube" style=" width:60px;"></a>
+
+        <a href="https://www.instagram.com/smkn2yogyakarta?igsh=MTZvcG16dmtkaTVlNA==" target="_blank" style="margin: 10px 0;">
+          <img src="image/ig-removebg-preview.png"alt="instagram" style=" width:40px;"></a>
+
+          <a href="https://www.tiktok.com/@smk2yogyakarta?is_from_webapp=1&sender_device=pc" target="_blank" style="margin: 10px 0;">
+            <img src="image/tt-removebg.png"alt="Tiktok" style=" width:40px;"></a>
+
+            <a href=" https://www.facebook.com/SMK2YK/" target="_blank" style="margin: 10px 0;">
+              <img src="image/22523-facebook-logo-removebg-preview.png"alt="Facebook" style=" width:35px;"></a>
+      </div>
+      </div>
+  
+      <div>
+        <h2 class="font-bold text-lg mb-2">Lokasi</h2>
+        <iframe
+          class="w-60 h-32 rounded"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3952.789721051377!2d110.36012357417565!3d-7.8111366921874825!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7a598fa4c2f38d%3A0x84de59cc8f3c2d83!2sSMK%20Negeri%202%20Yogyakarta!5e0!3m2!1sid!2sid!4v1615532109605!5m2!1sid!2sid"
+          allowfullscreen=""
+          loading="lazy"
+        ></iframe>
+      </div>
+    </div>
+  
+    <div class="text-center text-sm mt-6 border-t border-gray-700 pt-3">
+      &copy; 2025 SMKN 2 Yogyakarta.
+    </div>
+  </footer>
+
+
+</body>
+</div>
+</html>

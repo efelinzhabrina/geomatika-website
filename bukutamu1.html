@@ -1,0 +1,233 @@
+ <!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Buku Tamu</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+  />
+  <style>
+     @import url("https://fonts.googleapis.com/css2?family=Anton&display=swap");
+
+    .container {
+      background-color: white;
+      max-width: 500px;
+      margin: auto;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    h2 {
+      text-align: center;
+      color: #333;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+    }
+
+    label {
+      margin-top: 10px;
+      margin-bottom: 5px;
+    }
+
+    input, textarea {
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    button {
+      margin-top: 20px;
+      padding: 10px;
+      background-color: #2c3e50;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #1a252f;
+    }
+
+    #output {
+      margin-top: 20px;
+      color: green;
+      text-align: center;
+    }
+
+    #navMenu{
+  font-family:'poppins', sans-serif;
+  background: rgba(30, 30, 30, 0.9);
+  padding: 10px;
+  border-radius: 10px;
+  width: 200px;
+ }
+
+ .menu ul{
+  list-style: none;
+  padding: 0;
+ }
+
+ .menu li{
+  margin: 15px 0;
+ }
+
+ .menu a{
+  color: beige;
+  text-decoration: none;
+  font-size: 18px;
+  transition: 0.3s;
+ }
+
+ .menu a:hover{
+  color: 00bcd4;
+  padding-left: 15px;
+ }
+
+ h2{
+  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+      font-weight: bold;
+      text-decoration:underline;
+      font-size: 50%;
+      padding: 30px 30px 30px 30px;
+ }
+
+  </style>
+</head>
+<body class="bg-white">
+  <header class="bg-[gray] flex items-center px-4 py-2">
+    <button aria-label="Menu" class="text-white text-2xl mr-4">
+        <div id="navMenu" class="hidden flex-col bg-[gray] text-white absolute top-12 left-4 rounded-md shadow-md z-10 w-44">
+          <ul>
+            <li><a href="indexnew.html">Beranda</a></li>
+           <li> <a href="profiljurusan1.html">Profil Jurusan</a></li>
+             <li><a href="album1.html">Album</a></li>
+             <li><a href="prestasii.html">Prestasi</a></li>
+           <li><a href="bukutamu1.html">Buku Tamu</a></li>
+          </ul> </div>
+      <i class="fas fa-bars"></i>
+    </button>
+
+    <span class="inline-block mx-1">
+        <img
+          class="inline-block align-middle"
+          height="30px"
+          src="image/logosmk-removebg.png"
+          width="100px" 
+          class="w-6 h-6 mr-2"
+        />
+      </span>
+    <h1
+      class="text-white font-bold text-[16px] sm:text-[18px] md:text-[40px] leading-tight"
+      style="font-family: 'Anton', sans-serif;"
+    >
+      TEKNIK GEOMATIKA
+   SMK N 2 Yogyakarta
+    </h1>
+  </header>
+  <script>
+    const menuBtn = document.querySelector('button[aria-label="Menu"]');
+    const navMenu = document.getElementById('navMenu');
+  
+    menuBtn.addEventListener('click', () => {
+      navMenu.classList.toggle('hidden');
+    });
+  </script>
+
+  <div class="container">
+    <h2>Silahkan Isi Buku Tamu</h2>
+    <form id="bukuTamuForm">
+      <label for="nama">Nama:</label>
+      <input type="text" id="nama" name="nama" required />
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required />
+
+      <label for="instansi">Asal Sekolah:</label>
+      <input type="text" id="instansi" name="instansi" />
+
+      <label for="pesan">Pesan dan Kesan:</label>
+      <textarea id="pesan" name="pesan" rows="4" required></textarea>
+
+      <button type="submit">Kirim</button>
+    </form>
+    <div id="output"></div>
+  </div>
+
+  <script>
+    document.getElementById("bukuTamuForm").addEventListener("submit", function(e) {
+      e.preventDefault();
+      
+      const nama = document.getElementById("nama").value;
+      const email = document.getElementById("email").value;
+      const instansi = document.getElementById("instansi").value;
+      const pesan = document.getElementById("pesan").value;
+
+      const output = `
+        <h4>Terima kasih atas kunjungan Anda!</h4>
+        <p><strong>Nama:</strong> ${nama}</p>
+        <p><strong>Email:</strong> ${email}</p>
+        <p><strong>Instansi:</strong> ${instansi}</p>
+        <p><strong>Pesan:</strong> ${pesan}</p>
+      `;
+
+      document.getElementById("output").innerHTML = output;
+
+      document.getElementById("bukuTamuForm").reset();
+    });
+  </script>
+
+  
+<footer class="bg-gray-700 text-white pt-6 pb-3 px-6 mt-10">
+  <div class="flex flex-col md:flex-row justify-between gap-6">
+    <div>
+      <h2 class="font-bold text-lg mb-2">SMKN 2 Yogyakarta</h2>
+      <p> Alamat : Jl. AM. Sangaji 47 Yogyakarta<br />
+      Cokrodiningratan, Jetis, Yogyakarta<br />
+      No telp: (0274) 513490 / (0274) 512639<br />
+      Akreditasi: A</br>
+      info: @smk2-yk.sch.id</br>
+    </div>
+
+    <div>
+      <h2 class="font-bold text-lg mb-2">Media Sosial</h2>
+      <div style="margin-top: 20px; display: flex; flex-direction: row; align-items: center; justify-content: center;">
+        <a href="http://www.youtube.com/@SMKN2Yogyakarta" target="_blank" style="margin: 10px 0;">
+        <img src="image/ytbg-removebg-preview.png"alt="YouTube" style=" width:60px;"></a>
+
+        <a href="https://www.instagram.com/smkn2yogyakarta?igsh=MTZvcG16dmtkaTVlNA==" target="_blank" style="margin: 10px 0;">
+          <img src="image/ig-removebg-preview.png"alt="instagram" style=" width:40px;"></a>
+
+          <a href="https://www.tiktok.com/@smk2yogyakarta?is_from_webapp=1&sender_device=pc" target="_blank" style="margin: 10px 0;">
+            <img src="image/tt-removebg.png"alt="Tiktok" style=" width:40px;"></a>
+
+            <a href=" https://www.facebook.com/SMK2YK/" target="_blank" style="margin: 10px 0;">
+              <img src="image/22523-facebook-logo-removebg-preview.png"alt="Facebook" style=" width:35px;"></a>
+      </div>
+      </div>
+
+    <div>
+      <h2 class="font-bold text-lg mb-2">Lokasi</h2>
+      <iframe
+        class="w-60 h-32 rounded"
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3952.789721051377!2d110.36012357417565!3d-7.8111366921874825!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7a598fa4c2f38d%3A0x84de59cc8f3c2d83!2sSMK%20Negeri%202%20Yogyakarta!5e0!3m2!1sid!2sid!4v1615532109605!5m2!1sid!2sid"
+        allowfullscreen=""
+        loading="lazy"
+      ></iframe>
+    </div>
+  </div>
+
+  <div class="text-center text-sm mt-6 border-t border-gray-700 pt-3">
+    &copy; 2025 SMKN 2 Yogyakarta.
+  </div>
+</footer>
+
+</body>
+</html>
